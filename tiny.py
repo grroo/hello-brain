@@ -20,6 +20,10 @@ def cmd_shout(args):
     return text.upper() + "!"
 
 
+def cmd_hello(args):
+    return f"Hello, {args.name}!"
+
+
 def build_parser():
     parser = argparse.ArgumentParser(prog="tiny", description="a very small CLI")
     sub = parser.add_subparsers(dest="command", required=True)
@@ -30,6 +34,10 @@ def build_parser():
     p_shout = sub.add_parser("shout", help="repeat words, loudly")
     p_shout.add_argument("words", nargs="+", help="words to shout")
     p_shout.set_defaults(func=cmd_shout)
+
+    p_hello = sub.add_parser("hello", help="greet someone")
+    p_hello.add_argument("name", nargs="?", default="world", help="name to greet")
+    p_hello.set_defaults(func=cmd_hello)
 
     return parser
 
