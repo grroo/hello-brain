@@ -1,0 +1,7 @@
+name: hello-brain
+test: python3 -m unittest -v
+lint: python3 -m pyflakes tiny.py tests/ || true   # optional; pyflakes may not be installed
+run: python3 tiny.py version
+deploy: null
+rollback: null
+default_branch: main
