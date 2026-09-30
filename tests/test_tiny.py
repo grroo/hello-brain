@@ -12,6 +12,17 @@ class TestVersion(unittest.TestCase):
         self.assertEqual(tiny.run(["version"]), f"tiny {tiny.VERSION}")
 
 
+class TestHello(unittest.TestCase):
+    def test_default_greeting(self):
+        self.assertEqual(tiny.run(["hello"]), "Hello, world!")
+
+    def test_name_greeting(self):
+        self.assertEqual(tiny.run(["hello", "Ada"]), "Hello, Ada!")
+
+    def test_name_with_spaces(self):
+        self.assertEqual(tiny.run(["hello", "Ada Lovelace"]), "Hello, Ada Lovelace!")
+
+
 class TestShout(unittest.TestCase):
     def test_uppercases_one_word(self):
         self.assertEqual(tiny.run(["shout", "hi"]), "HI!")
