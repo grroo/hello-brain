@@ -9,3 +9,5 @@ python3 -m unittest -v
 ```
 
 The team's contract is `brain.yaml`. Task files live in the brain repo under `board/tasks/`.
+
+M4 test 1: approved from the phone.
