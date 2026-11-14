@@ -12,3 +12,4 @@ The team's contract is `brain.yaml`. Task files live in the brain repo under `bo
 
 M4 test 1: approved from the phone.
 M4 test 2: Not now from the phone.
+M4 retest: approved from the phone.
